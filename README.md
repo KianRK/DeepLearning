@@ -7,4 +7,8 @@ In this example we extract data in form of textual film reviews provided by imdb
 
 The comments in the code have been added by myself in the process of comprehending it.
 
-Although I didn't write it myself, it really gave me a good first understanding of how preparing and implementing a deep learning model looks like resp. how the mechanisms work and which effect different adjustments have on the outcome.
+Also originally the code was implemented with functionally programming.
+
+I implemented the object orientation to seperate the training of the model from its deployment.
+
+Although I didn't write the programm myself, it really gave me a good first understanding of how preparing and implementing a deep learning model looks like resp. how the mechanisms work and which effect different adjustments have on the outcome.
