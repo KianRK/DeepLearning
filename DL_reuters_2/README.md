@@ -7,3 +7,5 @@ The task now is to create a model that learns how to classify a given article to
 
 This kind of problem is known as categorial classification, and differentiates from the binary classification in choice of a different loss function (categorial_crossentropy)
 and a different activation function (softmax) for the output layer.Since the softmax function assigns probabilities to each class, which is exactly what we want to ascertain for our prediction, the output vector naturally has 46 dimensions, instead of 1 when we use the sigmoid function.
+
+As a little twist I started to outsource reoccuring functions in a library DL_function_lib.py which I hope will turn out useful in future endeavours.
