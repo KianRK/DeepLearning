@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
-#vectorize_sequences and to_one_hot are basically identical methods with different default values and are temporarily kept 
-#to stress their distinctive function in the source code they are used in.
 def vectorize_sequences(sequences, dimension=10000):
     results = np.zeros((len(sequences), dimension))
     for i, sequence in enumerate(sequences):
@@ -68,3 +67,41 @@ def smooth_curve(points, factor=0.9):
         else:
             smoothed_points.append(point)
     return smoothed_points
+
+#Even though I might never use it in an actual project, I wanted to implement the
+#softmax function myself. Also in the process of reading about it, I implemented it anyways,
+#because I wanted to plot it for different values. For that reason I also kept the plot
+#as a part of the method and added the original values for each element with a different scale,
+#to visualize the weighting the softmax function applies to its input.
+#Since it is not for in training application and serves "educational" purposes for myself,
+#I also set the plotting and console output to True by default.
+def softmax_costum(vect, show_plot=True, print_prob=True):
+    vect = [random.random() * random.randint(1,10) for i in range(20)]
+
+    softmax_out = []
+
+    if print_prob==True:
+        for i, element in enumerate(vect):
+            prob = np.exp(element)/sum(np.exp(vect))
+            print(f"Probability for the {i+1}. element: {prob}")
+            softmax_out.append(prob)
+
+
+    if show_plot==True:
+        fig, ax1 = plt.subplots()
+        ax1.set_xlabel('elements')
+        ax1.set_ylabel('probabilities',color='blue')
+        ax1.set_xticks(np.arange(0,21,1))
+        ax1.set_yticks(np.arange(0,np.max(softmax_out)+0.1,0.1))
+        ax1.tick_params(axis="y", labelcolor="b")
+        ax1.plot(range(1,len(softmax_out)+1), softmax_out,"bo-", label="")
+
+
+
+        second_ax = ax1.twinx()
+        second_ax.set_ylabel("original value", color="red")
+        second_ax.plot(range(1,len(vect)+1), vect,"ro-")
+        second_ax.tick_params(axis="y", labelcolor="r")
+        plt.show()
+
+    return softmax_out
