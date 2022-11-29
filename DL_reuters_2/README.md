@@ -1,3 +1,5 @@
+Multi class classification
+
 In terms of the data structure, this project is very similar to the previous one in which we classified movie reviews.
 The training data again is a list of integers, each representing a word index, so that each integer has unique word assigned to it and vice versa ( a bijective function so to say or a non redundant dictionary in python terms).
 The training data however, instead of movie reviews, now represents reuters news articles, each belonging to a single news category like sports, politics, science etc.
