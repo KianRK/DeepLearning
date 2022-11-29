@@ -2,7 +2,7 @@ In this repository I will upload files I coded from the book "Deep Learning with
 
 As I am writing this, I did not write any of the codes completely by myself and instead just followed the tutorials given by the book.
 
-I still added some little details though, like the object orientation or the modulization of reoccuring functions.
+I still added some little details though, like the object orientation or the modulization of reoccuring functions by creatin my own Deep Learning library with DL_function_lib.py.
 
 Each directory contains the files for a single project in which a certain problem is tackled.
 
