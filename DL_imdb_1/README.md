@@ -1,4 +1,6 @@
-# DeepLearning_MovieReviews
+Binary classification
+
+DeepLearning_MovieReviews
 My first DL code following the book "Deep Learning with Python and Keras" written by Keras developer Francois Chollet
 
 The source code is basically just copied from a tutorial, with some slight changes I made to play around with it.
