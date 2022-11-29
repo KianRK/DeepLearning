@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#vectorize_sequences and to_one_hot are basically identical methods with different default values and are temporarily kept 
+#to stress their distinctive function in the source code they are used in.
 def vectorize_sequences(sequences, dimension=10000):
     results = np.zeros((len(sequences), dimension))
     for i, sequence in enumerate(sequences):
